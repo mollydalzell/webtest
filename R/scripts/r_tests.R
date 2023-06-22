@@ -19,3 +19,8 @@ print(n = 177)
 
 wimbledon <- matches_2000s |>
 filter(tourney_name == "Wimbledon")
+
+wimbledon |>
+mutate(winner_seed = as.numeric(winner_seed)) |>
+ggplot(aes(x = winner_seed)) +
+geom_histogram()
