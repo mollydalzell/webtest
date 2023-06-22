@@ -64,4 +64,12 @@ function addParagraph() {
 //btn.addEventListener('click', addParagraph);
 btn.onclick = addParagraph;
 
-const list = document.querySelector('ol');
+
+// accessing and changing our html elements plus children
+const list = document.querySelector('ul');
+
+list.children.item(1); // select the second item of our html list
+const listItem = list.children.item(1);
+
+listItem.textContent = 'some new content';
+
