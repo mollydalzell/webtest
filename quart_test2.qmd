@@ -17,7 +17,8 @@ matches_2000s <- read_csv("data/wta_matches_2000s.csv")
 
 ```{r}
 wimbledon <- matches_2000s |>
-filter(tourney_name == "Wimbledon")
+filter(tourney_name == "Wimbledon") |>
+mutate(winner_seed = as.numeric(winner_seed))
 ```
 
 ```{r}
